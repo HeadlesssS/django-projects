@@ -1,0 +1,321 @@
+body {
+    font-family: 'Mulish', sans-serif;
+    padding-top: 10px; /* Adjusted based on navbar height */
+    font-family: 'Mulish', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Center the form and container */
+.container {
+    max-width: 900px; /* Increase width of the form */
+    background: #fff;
+    padding: 40px; /* Increase padding for more spacing */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Style form elements */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    height: 60px; /* Adjust height of input fields */
+    font-size: 16px; /* Slightly larger font size */
+    padding: 15px; /* Add more padding */
+    border-radius: 10px; /* Smooth rounded corners */
+    border: 2px solid #ccc; /* Add a visible border */
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn-primary {
+    height: 50px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-size: 16px; /* Slightly larger font size */
+    font-weight: bold;
+    width: 100%; /* Make button stretch across form */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+    transition: 0.3s;
+}
+
+#descriptionInput {
+    height: 120px; /* Increase height for description */
+    resize: vertical; /* Allow user to resize if needed */
+}
+
+/* TABLE STYLING */
+table {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Ensures borders don't double up */
+}
+
+/* Adding border lines between rows and columns */
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #000; /* Black lines for clear row and column separation */
+}
+
+table th {
+    background-color: #007bff; /* Blue background for header */
+    color: #fff;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row colors */
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Notification Bell Icon */
+#notification-icon {
+    cursor: pointer;
+    color: #555;
+    position: relative;
+}
+
+#notification-icon:hover {
+    color: #007bff;
+}
+
+/* Notification Badge */
+#notification-badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #dc3545; /* Red background for alert */
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* NOTIFICATION PANEL - Smaller and Prettier */
+#notification-panel {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px; /* Smaller width */
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px; /* Reduced padding for compact size */
+    font-size: 12px; /* Smaller text */
+    z-index: 9999;
+}
+
+/* Styling for the notification container */
+#notification-container {
+    display: none;
+    background-color: #f8d7da; /* Soft red background */
+    border: 1px solid #f5c6cb;
+    padding: 10px; /* Reduced padding for compact size */
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 14px; /* Smaller font size */
+}
+
+#notification-container .alert-info {
+    margin-bottom: 0;
+}
+
+#notification-container #countdown-timer {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Adding a bit of margin between form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+/* Set the navbar to be fixed at the top */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f8f9fa; /* Light background */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Add padding to body to prevent content from hiding behind the navbar */
+body {
+    padding-top: 80px; /* Adjusted based on navbar height */
+    font-family: 'Mulish', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+/* Center the form and container */
+.container {
+    max-width: 900px; /* Increase width of the form */
+    background: #fff;
+    padding: 40px; /* Increase padding for more spacing */
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Style form elements */
+.form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    height: 60px; /* Adjust height of input fields */
+    font-size: 16px; /* Slightly larger font size */
+    padding: 15px; /* Add more padding */
+    border-radius: 10px; /* Smooth rounded corners */
+    border: 2px solid #ccc; /* Add a visible border */
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.btn-primary {
+    height: 50px;
+    font-size: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    width: 100%; /* Make button stretch across form */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue */
+    transition: 0.3s;
+}
+
+#descriptionInput {
+    height: 120px; /* Increase height for description */
+    resize: vertical; /* Allow user to resize if needed */
+}
+
+/* TABLE STYLING */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse; /* Ensures borders don't double up */
+}
+
+/* Adding border lines between rows and columns */
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #000; /* Black lines for clear row and column separation */
+}
+
+table th {
+    background-color: #007bff; /* Blue background for header */
+    color: #fff;
+    font-weight: bold;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternate row colors */
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+}
+
+/* Notification Bell Icon */
+#notification-icon {
+    cursor: pointer;
+    color: #555;
+    position: relative;
+}
+
+#notification-icon:hover {
+    color: #007bff;
+}
+
+/* Notification Badge */
+#notification-badge {
+    font-size: 14px;
+    padding: 5px 10px;
+    background-color: #dc3545; /* Red background for alert */
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+/* NOTIFICATION PANEL - Smaller and Prettier */
+#notification-panel {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 200px; /* Smaller width */
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 10px; /* Reduced padding for compact size */
+    font-size: 12px; /* Smaller text */
+    z-index: 9999;
+}
+
+/* Styling for the notification container */
+#notification-container {
+    display: none;
+    background-color: #f8d7da; /* Soft red background */
+    border: 1px solid #f5c6cb;
+    padding: 10px; /* Reduced padding for compact size */
+    border-radius: 8px;
+    margin-top: 20px;
+    font-size: 14px; /* Smaller font size */
+}
+
+#notification-container .alert-info {
+    margin-bottom: 0;
+}
+
+#notification-container #countdown-timer {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Adding a bit of margin between form fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.btn-edit {
+    background-color: #ffc107;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-delete {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}

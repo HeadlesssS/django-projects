@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Inspiration</title>
+
+    {% load static %}
+<link rel="stylesheet" href="{% static "css/style3.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Daily Inspiration</h1>
+        <p>A collection of motivational quotes to inspire your day and lift your spirits.</p>
+      </header>
+
+      <main>
+        <div id="loading" class="loading">
+          <p>Loading inspiration...</p>
+        </div>
+        
+        <div id="quotes-container" class="quotes-grid"></div>
+
+        <div class="daily-tip">
+          <h2>Daily Tip</h2>
+          <div class="tip-card">
+            <p>One must imagine Sisyphus happy.</p>
+            <div class="tip-footer">
+              <button class="btn-outline">More Tips</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+     
+    </div>
+
+{% load static %}
+<script src="{% static 'js/js.js' %}"></script>
+
+  </body>
+</html>
