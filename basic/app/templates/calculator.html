@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>calc</title>
+</head>
+
+<body>
+
+
+<form method="post">
+
+{% csrf_token %}
+
+<label>Num1:</label>
+<input type="text" name=num1>
+
+<label>Num2:</label>
+<input type="text" name=num2>
+
+<label>opr:</label>
+<input type="text" name=operator>
+
+<button type="submit">Calculate</button>
+
+<label>Output:</label>
+<input type="text" value="{{ ans }}" readonly>
+
+{{ans}}
+
+
+</form>
+
+</body>
+
+</html>

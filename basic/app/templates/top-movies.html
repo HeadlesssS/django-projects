@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Movies - MovieFlix</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.309.0/dist/umd/lucide.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-film"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 3v18"/><path d="M3 7.5h4"/><path d="M3 12h18"/><path d="M3 16.5h4"/><path d="M17 3v18"/><path d="M17 7.5h4"/><path d="M17 16.5h4"/></svg>
+                <span>MovieFlix</span>
+            </a>
+
+            <nav class="main-nav">
+                <div class="dropdown">
+                    <button class="dropdown-trigger">Categories</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-grid">
+                            <a href="category/action.html" class="dropdown-item">
+                                <div class="dropdown-item-title">Action</div>
+                                <p class="dropdown-item-desc">Thrilling action movies with explosive scenes and heroic characters.</p>
+                            </a>
+                            <a href="category/comedy.html" class="dropdown-item">
+                                <div class="dropdown-item-title">Comedy</div>
+                                <p class="dropdown-item-desc">Hilarious comedies that will make you laugh out loud.</p>
+                            </a>
+                            <a href="category/drama.html" class="dropdown-item">
+                                <div class="dropdown-item-title">Drama</div>
+                                <p class="dropdown-item-desc">Emotional dramas exploring complex human relationships.</p>
+                            </a>
+                            <a href="category/horror.html" class="dropdown-item">
+                                <div class="dropdown-item-title">Horror</div>
+                                <p class="dropdown-item-desc">Scary movies that will keep you on the edge of your seat.</p>
+                            </a>
+                            <a href="category/sci-fi.html" class="dropdown-item">
+                                <div class="dropdown-item-title">Sci-Fi</div>
+                                <p class="dropdown-item-desc">Futuristic science fiction exploring advanced technology and space.</p>
+                            </a>
+                            <a href="category/documentary.html" class="dropdown-item">
+                                <div class="dropdown-item-title">Documentary</div>
+                                <p class="dropdown-item-desc">Informative documentaries about real-world events and people.</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="top-movies.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Top Movies
+                </a>
+                <a href="watchlist.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    Watchlist
+                </a>
+            </nav>
+
+            <div class="nav-actions">
+                <div class="search-container">
+                    <button class="search-button" id="searchButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </button>
+                    <div class="search-input-container" id="searchInputContainer">
+                        <input type="search" placeholder="Search movies..." class="search-input" id="searchInput">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search search-icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                    </div>
+                </div>
+                <button class="account-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="mb-8">
+            <h1 class="text-2xl md:text-3xl font-bold mb-6">Top Movies</h1>
+
+            <div class="movie-grid" id="top-movies-grid">
+                <!-- Movie cards will be inserted here by JavaScript -->
+            </div>
+
+            <div class="load-more">
+                <button class="btn btn-outline">
+                    Load More
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize search functionality
+            initSearch();
+            
+            // Render top movies
+            const topMoviesGrid = document.getElementById('top-movies-grid');
+            if (topMoviesGrid) {
+                // In a real app, this would be a more comprehensive list
+                const allTopMovies = [
+                    ...topMovies,
+                    { id: 25, title: "The Shawshank Redemption", year: 1994, rating: 9.3, poster: "https://placehold.co/300x450" },
+                    { id: 26, title: "The Godfather", year: 1972, rating: 9.2, poster: "https://placehold.co/300x450" },
+                    { id: 27, title: "The Dark Knight", year: 2008, rating: 9.0, poster: "https://placehold.co/300x450" },
+                    { id: 28, title: "The Godfather Part II", year: 1974, rating: 9.0, poster: "https://placehold.co/300x450" },
+                    { id: 29, title: "12 Angry Men", year: 1957, rating: 9.0, poster: "https://placehold.co/300x450" },
+                    { id: 30, title: "Schindler's List", year: 1993, rating: 8.9, poster: "https://placehold.co/300x450" },
+                    { id: 31, title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 8.9, poster: "https://placehold.co/300x450" },
+                    { id: 32, title: "Pulp Fiction", year: 1994, rating: 8.9, poster: "https://placehold.co/300x450" },
+                    { id: 33, title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 8.8, poster: "https://placehold.co/300x450" },
+                    { id: 34, title: "The Good, the Bad and the Ugly", year: 1966, rating: 8.8, poster: "https://placehold.co/300x450" },
+                    { id: 35, title: "Forrest Gump", year: 1994, rating: 8.8, poster: "https://placehold.co/300x450" },
+                    { id: 36, title: "Fight Club", year: 1999, rating: 8.8, poster: "https://placehold.co/300x450" }
+                ];
+                
+                renderMovieGrid(topMoviesGrid, allTopMovies);
+            }
+        });
+    </script>
+</body>
+</html>
