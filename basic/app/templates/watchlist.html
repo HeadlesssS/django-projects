@@ -1,14 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Watchlist - MovieFlix</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.309.0/dist/umd/lucide.min.css">
 </head>
 <body>
+    {% load static %}
     <header class="navbar">
         <div class="container">
             <a href="index.html" class="logo">
@@ -99,8 +101,7 @@
         </section>
     </main>
 
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Initialize search functionality
@@ -149,6 +150,43 @@
                     <a href="index.html" class="btn btn-primary">Browse Movies</a>
                 </div>
             `;
+        }
+        
+        function initSearch() {
+            // Example: basic search toggle logic
+            const searchButton = document.getElementById('searchButton');
+            const searchInputContainer = document.getElementById('searchInputContainer');
+            if (searchButton && searchInputContainer) {
+                searchButton.addEventListener('click', function() {
+                    searchInputContainer.classList.toggle('active');
+                });
+            }
+        }
+        
+        function initTabs() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+            tabButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active from all buttons and contents
+                    tabButtons.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(tc => tc.classList.remove('active'));
+                    // Add active to clicked button and corresponding content
+                    btn.classList.add('active');
+                    const tab = btn.getAttribute('data-tab');
+                    document.getElementById(tab).classList.add('active');
+                });
+            });
+        }
+        
+        function renderMovieGrid(container, items) {
+            container.innerHTML = items.map(item => `
+                <div class="movie-card">
+                    <img src="${item.poster}" alt="${item.title}">
+                    <h3>${item.title} (${item.year})</h3>
+                    <p>Type: ${item.type === 'movie' ? 'Movie' : 'TV Show'}</p>
+                </div>
+            `).join('');
         }
     </script>
 </body>

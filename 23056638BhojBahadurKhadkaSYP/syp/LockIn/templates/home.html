@@ -43,12 +43,6 @@
           <a class="nav-link active" aria-current="page" href="{% url 'LockIn:blog' %}">Blog</a>
           </li>
         </ul>
-        {% comment %} <!-- Search Bar -->
-        <form class="d-flex ms-auto" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-        <!-- Notification Bell Icon --> {% endcomment %}
         <div class="position-relative ms-3">
           <i class="fa-solid fa-bell fa-2x" id="notification-icon" onclick="showNotification()"></i>
           <span id="notification-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">!</span>

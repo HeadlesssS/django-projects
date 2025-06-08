@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Quotes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background-color: #f8f5f2;
+            color: #333;
+            line-height: 1.6;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-bottom: 1px solid #e6e1dd;
+        }
+        
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #2d2d2d;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+        
+        .subtitle {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 300;
+            font-size: 1.1rem;
+            color: #6d6d6d;
+            margin-bottom: 20px;
+        }
+        
+        /* Main Content Styles */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        
+        .quote-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            padding: 40px;
+            margin-bottom: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+            min-height: 250px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .quote-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            line-height: 1.4;
+            margin-bottom: 20px;
+            position: relative;
+            padding: 0 20px;
+        }
+        
+        .quote-text::before {
+            content: '"';
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            position: absolute;
+            left: -20px;
+            top: -20px;
+            color: #e6e1dd;
+        }
+        
+        .quote-author {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.1rem;
+            text-align: right;
+            color: #6d6d6d;
+            font-style: italic;
+        }
+        
+        /* Controls */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        button {
+            background-color: #2d2d2d;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        button:hover {
+            background-color: #444;
+            transform: translateY(-2px);
+        }
+        
+        /* Categories */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .category {
+            background-color: white;
+            border: 1px solid #e6e1dd;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .category:hover, .category.active {
+            background-color: #2d2d2d;
+            color: white;
+            border-color: #2d2d2d;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #e6e1dd;
+            color: #6d6d6d;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .quote-text {
+                font-size: 1.5rem;
+            }
+            
+            .quote-container {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .quote-text {
+                font-size: 1.3rem;
+            }
+            
+            .quote-container {
+                padding: 20px;
+            }
+            
+            .controls {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Animation for quote transitions */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+    </style>
+</head>
+
+
+
+
+<body>
+    <header>
+        <h1>Elegant Quotes</h1>
+        <p class="subtitle">Wisdom and inspiration for every moment</p>
+        <div class="categories">
+            <div class="category active" data-category="all">All</div>
+            <div class="category" data-category="inspiration">Inspiration</div>
+            <div class="category" data-category="wisdom">Wisdom</div>
+            <div class="category" data-category="success">Success</div>
+            <div class="category" data-category="life">Life</div>
+        </div>
+    </header>
+    
+
+
+    <main>
+        <div class="quote-container fade-in">
+            <p class="quote-text" id="quote-text">The greatest glory in living lies not in never falling, but in rising every time we fall.</p>
+            <p class="quote-author" id="quote-author">— Nelson Mandela</p>
+        </div>
+        
+        <div class="controls">
+            <button id="new-quote">New Quote</button>
+            
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Elegant Quotes. Designed with love and wisdom. </p>
+    </footer>
+    <script src="js.js">
+</body>
+</html>

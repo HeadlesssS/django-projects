@@ -1,10 +1,11 @@
+{% load static%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Top Movies - MovieFlix</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide-icons@0.309.0/dist/umd/lucide.min.css">
 </head>
@@ -91,37 +92,42 @@
             </div>
         </section>
     </main>
-
-    <script src="js/data.js"></script>
-    <script src="js/script.js"></script>
+    <script src="{% static 'js/script.js' %} "></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Initialize search functionality
-            initSearch();
-            
             // Render top movies
             const topMoviesGrid = document.getElementById('top-movies-grid');
             if (topMoviesGrid) {
                 // In a real app, this would be a more comprehensive list
                 const allTopMovies = [
                     ...topMovies,
-                    { id: 25, title: "The Shawshank Redemption", year: 1994, rating: 9.3, poster: "https://placehold.co/300x450" },
-                    { id: 26, title: "The Godfather", year: 1972, rating: 9.2, poster: "https://placehold.co/300x450" },
-                    { id: 27, title: "The Dark Knight", year: 2008, rating: 9.0, poster: "https://placehold.co/300x450" },
-                    { id: 28, title: "The Godfather Part II", year: 1974, rating: 9.0, poster: "https://placehold.co/300x450" },
-                    { id: 29, title: "12 Angry Men", year: 1957, rating: 9.0, poster: "https://placehold.co/300x450" },
-                    { id: 30, title: "Schindler's List", year: 1993, rating: 8.9, poster: "https://placehold.co/300x450" },
-                    { id: 31, title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 8.9, poster: "https://placehold.co/300x450" },
-                    { id: 32, title: "Pulp Fiction", year: 1994, rating: 8.9, poster: "https://placehold.co/300x450" },
-                    { id: 33, title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 8.8, poster: "https://placehold.co/300x450" },
-                    { id: 34, title: "The Good, the Bad and the Ugly", year: 1966, rating: 8.8, poster: "https://placehold.co/300x450" },
-                    { id: 35, title: "Forrest Gump", year: 1994, rating: 8.8, poster: "https://placehold.co/300x450" },
-                    { id: 36, title: "Fight Club", year: 1999, rating: 8.8, poster: "https://placehold.co/300x450" }
+                    { id: 25, title: "The Shawshank Redemption", year: 1994, rating: 9.3, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 26, title: "The Godfather", year: 1972, rating: 9.2, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 27, title: "The Dark Knight", year: 2008, rating: 9.0, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 28, title: "The Godfather Part II", year: 1974, rating: 9.0, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 29, title: "12 Angry Men", year: 1957, rating: 9.0, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 30, title: "Schindler's List", year: 1993, rating: 8.9, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 31, title: "The Lord of the Rings: The Return of the King", year: 2003, rating: 8.9, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 32, title: "Pulp Fiction", year: 1994, rating: 8.9, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 33, title: "The Lord of the Rings: The Fellowship of the Ring", year: 2001, rating: 8.8, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 34, title: "The Good, the Bad and the Ugly", year: 1966, rating: 8.8, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 35, title: "Forrest Gump", year: 1994, rating: 8.8, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" },
+                    { id: 36, title: "Fight Club", year: 1999, rating: 8.8, poster: "https://legacybox.com/cdn/shop/articles/LBFilmReel.jpg?v=1563402798&width=750" }
                 ];
                 
                 renderMovieGrid(topMoviesGrid, allTopMovies);
             }
         });
+
+        function renderMovieGrid(container, movies) {
+            container.innerHTML = movies.map(movie => `
+                <div class="movie-card">
+                    <img src="${movie.poster}" alt="${movie.title}">
+                    <h3>${movie.title} (${movie.year})</h3>
+                    <p>Rating: ${movie.rating}</p>
+                </div>
+            `).join('');
+        }
     </script>
 </body>
 </html>

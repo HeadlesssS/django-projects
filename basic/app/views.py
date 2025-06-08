@@ -9,11 +9,9 @@ def dynamic(request,text):
 
 
 def movies(request):
-
     data={
         'title':'Ms'
     }
-
     return render(request,"movies.html",data)
 
 
@@ -22,11 +20,6 @@ def top_movies(request):
 
 def watchlist(request):
     return render(request,"watchlist.html")
-
-
-
-
-
 
 def calculator(request):
     ans=''
@@ -51,3 +44,15 @@ def calculator(request):
             ans="Invalid operation"
             
     return render(request,"calculator.html",{"ans":ans})
+
+def secondindex(request):
+    return render(request,"home.html")
+
+def blog1(request):
+    return render(request,"own.html")
+
+def blog2(request):
+    return render(request,"apiblog.html")
+
+def maps(request):
+    return render(request,"maps.html")
