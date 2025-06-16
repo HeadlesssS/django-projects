@@ -1,5 +1,5 @@
 # 23056638SYP
-### It's a basic habit tracking type app where you can set notification for your workouts with countdown timer.
+### It's a basic habit tracking type app where you can set notification for your workouts with countdown timer with a blog page which loads quotes using APIs.
 
 
 ![image](https://github.com/user-attachments/assets/cf6d89ec-3cc6-45db-bed2-5201a2a41f17)
@@ -11,10 +11,8 @@
 # basic
 ### It is a basic app with home page, watchlist page, top movies page and two iterations of blog page which loads blog from api and a simple map 
 
-
 ![image](https://github.com/user-attachments/assets/0f7c29cb-42dc-4975-b782-7fc0cc2647eb)
 ![image](https://github.com/user-attachments/assets/e2f8171e-4759-48ba-b16f-02c5c782bf3e)
-![image](https://github.com/user-attachments/assets/5dc13872-f2d8-4754-8fa9-c690ed6355e9)
 
 ![image](https://github.com/user-attachments/assets/9e0e4efd-e0bc-4374-aa64-429bd551f3ef)
 
